@@ -8,7 +8,7 @@ export default function Form({ addTodo }) {
     const [id, setId] = useState(0);
 
     const todoCreate = (text) => {
-        const todoObj = { text: text, id: id };
+        const todoObj = { nome: text, id: id };
         setId(id + 1);
         addTodo(todoObj);
         document.getElementById('outlined-basic').value = null;
