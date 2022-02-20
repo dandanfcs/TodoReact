@@ -22,21 +22,25 @@ export default function Form({ addTodo }) {
 
 
 return (
+    <>
+    <div style={{ display: "flex", justifyContent: "center", padding: "10px", color:"white" }}><h1>TODO LIST</h1></div>
     <Paper>
+
         <div style={{ display: "flex", justifyContent: "center", padding: "10px" }}>
             <TextField id="outlined-basic"
                 label="Tarefa"
-                fullWidth
+                style={{width:"82%"}}
+                fu
                 onChange={(e) => setText(e.target.value)}
             />
 
             <Button
-                variant="outlined"
-                color="primary"
+                style={{ background: "#1976d2", color: "white", padding:"5px", fontWeight:"bold"}}
                 size="small"
                 onClick={() => todoCreate(text)}
             >Adicionar</Button>
         </div>
     </Paper>
+    </>
 )
 }
