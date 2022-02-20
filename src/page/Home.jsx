@@ -15,11 +15,11 @@ const [todos, setTodos] = useState([]);
    }, [])
 
     const addTodo = (todo) => {
-     
         setTodos([...todos, todo])
     }
     const deleteTodo = (id) => {
         var filtered = todos.filter((todo) => todo.id !== id);
+        const response = Api.delete(`/deletetask/${id}`);
         setTodos(filtered);
     }
 

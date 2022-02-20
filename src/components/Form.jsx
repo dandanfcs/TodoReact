@@ -8,15 +8,13 @@ export default function Form({ addTodo }) {
 
     const todoCreate =  (text) => {
         const todoObj = { nome: text };
-        console.log(todoObj)
         addTodo(todoObj);
 
         try {
-            console.log("xxx")
-            const response = axios.post('/addtask', todoObj)
+            axios.post('/addtask', todoObj);
         }
         catch (error) {
-            console.log("aaaa"+error.message)
+            console.log(error.message);
         }
 
         document.getElementById('outlined-basic').value = null;
