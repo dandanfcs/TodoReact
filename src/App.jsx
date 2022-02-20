@@ -1,9 +1,7 @@
-import './App.css';
+import '../src/css/App.css';
 import Home from './page/Home'
 
 function App() {
-
-
   
   return (
     
